@@ -33,7 +33,7 @@ class AuthController extends Controller
     {
         // Generate a random password
 
-        $random_password = rand(111111,999999);
+        $random_password = rand(111,999);
 
         // Retrieve the user by email
         $user = User::where('email', '=', $request->email)->first();
