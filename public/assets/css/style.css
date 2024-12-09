@@ -259,13 +259,13 @@ input {
     margin-left: 100px;
 }
 /* ====== Home Section =====*/
-.home {
+/* .home {
     background: url(../img/home-bg.png) ;
     background-size: cover;
     background-position: right;
     background-position-x: center;
     height: 100vh;
-}
+} */
 
 .home_container {
     position: relative;

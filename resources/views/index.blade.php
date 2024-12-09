@@ -5,7 +5,12 @@
     <!---===== MAIN =====-->
     <main class="main">
         <!--==== Home section====-->
-        <section class="home" id="home">
+        <section class="home" id="home"
+            style="background: url('{{ url('public/img/'.@$getrecord[0]->background_image)}}');
+                   background-size: cover;
+                   background-position: right;
+                   background-position-x: center;
+                   height: 100vh;">
             <div class="home_container container grid">
                 <div class="home_social">
                     <span class="home_social-follow">Follow Me</span>
@@ -22,13 +27,12 @@
                     </div>
                 </div>
 
-                <img src="{{url('public/assets/img/home-img.jpg')}}" alt="" class="home_img">
+                <img src="{{ url('public/img/'.@$getrecord[0]->profile)}}" alt="" class="home_img">
 
                 <div class="home_data">
-                    <h1 class="home_title">Hi, Lolo is my name</h1>
-                    <h3 class="home_subtitle">Web Developer</h3>
-                    <p class="home_description">High level experience in web design and development knowledge,
-                        producing quality work.
+                    <h1 class="home_title">Hi, {{ @$getrecord[0]->your_name }} is my name</h1>
+                    <h3 class="home_subtitle">{{ @$getrecord[0]->work_experience }}</h3>
+                    <p class="home_description">{{ @$getrecord[0]->description }}
                     </p>
                     <a href="#about" class="button"><i class="uil uil-user button_icon"></i>
                     More About Me
