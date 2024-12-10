@@ -75,25 +75,23 @@
             <h2 data-heading="My intro"class="section_title">About Me</h2>
 
             <div class="about_container container grid">
-                <img src="{{url('public/assets/img/about-img.jpg')}}" alt="" class="about_img">
+                <img src="{{ url('public/img/'.@$getrecord[0]->about_image)}}" alt="" class="about_img">
 
                 <div class="about_data">
-                    <h3 class="about_heading">I'm Lolo Adan, currently in Kenya</h3>
-                    <p class="about_description">Web developer, with extensive knowledge and years of experience,
-                        working in web technologies and Ui/Ux design, delivering quality work.
-                    </p>
+                    <h3 class="about_heading">I'm {{ @$getrecord[0]->your_name }}, currently in {{ @$getrecord[0]->country }}</h3>
+                    <p class="about_description">{{ @$getrecord[0]->description }}</p>
 
                     <div class="about_info grid">
                         <div class="about_box">
                             <i class="uil uil-award about_icon"></i>
                             <h3 class="about_title">Experience</h3>
-                            <span class="about_subtitle">8 + years</span>
+                            <span class="about_subtitle">{{ @$getrecord[0]->years_of_experience }}</span>
                         </div>
 
                         <div class="about_box">
                             <i class="uil uil-suitcase-alt about_icon"></i>
                             <h3 class="about_title">Completed</h3>
-                            <span class="about_subtitle">48 + Projects</span>
+                            <span class="about_subtitle">{{ @$getrecord[0]->completed_projects }}</span>
                         </div>
 
                         <div class="about_box">

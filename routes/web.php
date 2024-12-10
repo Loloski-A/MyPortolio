@@ -21,6 +21,8 @@ Route::middleware(['auth'])->group(function (){
 
     Route::get('admin/about', [DashboardController::class, 'admin_about']);
 
+    Route::post('admin/about/post', [DashboardController::class, 'admin_about_post']);
+
     Route::get('admin/skills', [DashboardController::class, 'admin_skills']);
 
     Route::get('admin/work', [DashboardController::class, 'admin_work']);

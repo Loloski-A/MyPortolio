@@ -63,7 +63,7 @@
                                     <input type="file" name="profile" class="form-control">
                                     @if(@$getrecord[0]->profile)
                                     <img src="{{ url('public/img/'.@$getrecord[0]->profile)}}"
-                                    width="200" height="100" />
+                                    width="200" height="200" />
                                     @endif
                                 </div>
                             </div>
