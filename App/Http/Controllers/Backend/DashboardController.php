@@ -17,7 +17,7 @@ class DashboardController extends Controller
 
     public function admin_home(Request $request)
     {
-        $data['getrecord'] = HomeModel::all();
+        $data['homeRecords'] = HomeModel::all();
         return view('backend.home.list', $data);
     }
 
@@ -74,7 +74,7 @@ class DashboardController extends Controller
 
     public function admin_about(Request $request)
     {
-        $data['getrecord'] = AboutModel::all();
+        $data['aboutRecords'] = AboutModel::all();
         return view('backend.about.list', $data);
     }
 

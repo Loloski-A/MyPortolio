@@ -11,8 +11,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $data['getrecord'] = HomeModel::all();
-        $data['getrecord'] = AboutModel::all();
+        $data['homeRecords'] = HomeModel::all();
+        $data['aboutRecords'] = AboutModel::all();
         $data['className'] = 'index';
         return view('index', $data);
     }

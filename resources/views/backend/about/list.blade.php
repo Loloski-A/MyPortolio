@@ -51,8 +51,8 @@
                                 </label>
                                 <div class="col-sm-10">
                                     <input type="file" name="about_image" class="form-control">
-                                    @if(@$getrecord[0]->about_image)
-                                    <img src="{{ url('public/img/'.@$getrecord[0]->about_image)}}"
+                                    @if(@$aboutRecords[0]->about_image)
+                                    <img src="{{ url('public/img/'.@$aboutRecords[0]->about_image)}}"
                                     width="200" height="200" />
                                     @endif
                                 </div>
@@ -65,7 +65,7 @@
                                 <div class="col-sm-10">
                                     <input type="text" name="your_name"
                                     class="form-control" placeholder="Enter Your Name"
-                                    value={{ @$getrecord[0]->your_name }} >
+                                    value={{ @$aboutRecords[0]->your_name }} >
                                 </div>
                             </div>
 
@@ -76,7 +76,7 @@
                                 <div class="col-sm-10">
                                     <input type="text" name="country"
                                     class="form-control" placeholder="Enter Country Name"
-                                    value={{ @$getrecord[0]->country }}>
+                                    value={{ @$aboutRecords[0]->country }}>
                                 </div>
                             </div>
 
@@ -87,7 +87,7 @@
                                 <div class="col-sm-10">
                                     <textarea name="description"
                                     class="form-control"
-                                    placeholder="Enter Description for Your Work Experience">{{ @$getrecord[0]->description }}</textarea>
+                                    placeholder="Enter Description for Your Work Experience">{{ @$aboutRecords[0]->description }}</textarea>
                                 </div>
                             </div>
 
@@ -98,7 +98,7 @@
                                 <div class="col-sm-10">
                                     <input type="text" name="years_of_experience"
                                     class="form-control" placeholder="Enter Your Years of Experience"
-                                    value={{ @$getrecord[0]->years_of_experience }}>
+                                    value={{ @$aboutRecords[0]->years_of_experience }}>
                                 </div>
                             </div>
 
@@ -109,17 +109,17 @@
                                 <div class="col-sm-10">
                                     <input type="text" name="completed_projects"
                                     class="form-control" placeholder="Enter No. of completed projects"
-                                    value={{ @$getrecord[0]->completed_projects }}>
+                                    value={{ @$aboutRecords[0]->completed_projects }}>
                                 </div>
 
-                                <input type="hidden" name="id" value={{ @$getrecord[0]->id }}>
+                                <input type="hidden" name="id" value={{ @$aboutRecords[0]->id }}>
                             </div>
 
                             <div class="card-footer">
                                 <button type="submit" name="add_to_update"
                                 id="add_to_update" class="btn btn-info"
-                                value="@if(count($getrecord)>0) Edit @else Add @endif">
-                                @if(count($getrecord)>0) Edit @else Add @endif
+                                value="@if(count($aboutRecords)>0) Edit @else Add @endif">
+                                @if(count($aboutRecords)>0) Edit @else Add @endif
                                 </button>
                                 <a href="" class="btn btn-default float-right">
                                     Cancel

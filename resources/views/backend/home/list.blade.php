@@ -47,8 +47,8 @@
                                 <label for="background_image" class="col-sm-2 col-form-label">Background Image</label>
                                 <div class="col-sm-10">
                                     <input type="file" name="background_image" class="form-control">
-                                    @if(@$getrecord[0]->background_image)
-                                        <img src="{{ url('public/img/'.@$getrecord[0]->background_image) }}
+                                    @if(@$homeRecords[0]->background_image)
+                                        <img src="{{ url('public/img/'.@$homeRecords[0]->background_image) }}
                                         " width="200" height="100" />
                                     @endif
                                 </div>
@@ -61,8 +61,8 @@
                                 </label>
                                 <div class="col-sm-10">
                                     <input type="file" name="profile" class="form-control">
-                                    @if(@$getrecord[0]->profile)
-                                    <img src="{{ url('public/img/'.@$getrecord[0]->profile)}}"
+                                    @if(@$homeRecords[0]->profile)
+                                    <img src="{{ url('public/img/'.@$homeRecords[0]->profile)}}"
                                     width="200" height="200" />
                                     @endif
                                 </div>
@@ -75,7 +75,7 @@
                                 <div class="col-sm-10">
                                     <input type="text" name="your_name"
                                     class="form-control" placeholder="Enter Your Name"
-                                    value={{ @$getrecord[0]->your_name }}>
+                                    value={{ @$homeRecords[0]->your_name }}>
                                 </div>
                             </div>
 
@@ -86,7 +86,7 @@
                                 <div class="col-sm-10">
                                     <input type="text" name="work_experience"
                                     class="form-control" placeholder="Enter Your Work Experience"
-                                    value={{ @$getrecord[0]->work_experience }}>
+                                    value={{ @$homeRecords[0]->work_experience }}>
                                 </div>
                             </div>
 
@@ -96,18 +96,18 @@
                                 </label>
                                 <div class="col-sm-10">
                                     <textarea name="description"
-                                    class="form-control" placeholder="Enter Description for
-                                    Your Work Experience">{{ @$getrecord[0]->description }}</textarea>
+                                    class="form-control"
+                                    placeholder="Enter Description for Your Work Experience">{{ @$homeRecords[0]->description }}</textarea>
                                 </div>
 
-                                <input type="hidden" name="id" value={{ @$getrecord[0]->id }}>
+                                <input type="hidden" name="id" value={{ @$homeRecords[0]->id }}>
                             </div>
 
                             <div class="card-footer">
                                 <button type="submit" name="add_to_update"
-                                id="add_to_update" value="@if(count($getrecord)>0) Edit @else Add @endif"
+                                id="add_to_update" value="@if(count($homeRecords)>0) Edit @else Add @endif"
                                 class="btn btn-info" >
-                                @if(count($getrecord)>0) Edit @else Add @endif
+                                @if(count($homeRecords)>0) Edit @else Add @endif
                                 </button>
                                 <a href="" class="btn btn-default float-right">
                                     Cancel

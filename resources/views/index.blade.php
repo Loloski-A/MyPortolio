@@ -6,7 +6,7 @@
     <main class="main">
         <!--==== Home section====-->
         <section class="home" id="home"
-            style="background: url('{{ url('public/img/'.@$getrecord[0]->background_image)}}');
+            style="background: url('{{ url('public/img/'.@$homeRecords[0]->background_image)}}');
                    background-size: cover;
                    background-position: right;
                    background-position-x: center;
@@ -27,13 +27,12 @@
                     </div>
                 </div>
 
-                <img src="{{ url('public/img/'.@$getrecord[0]->profile)}}" alt="" class="home_img">
+                <img src="{{ url('public/img/'.@$homeRecords[0]->profile)}}" alt="" class="home_img">
 
                 <div class="home_data">
-                    <h1 class="home_title">Hi, {{ @$getrecord[0]->your_name }} is my name</h1>
-                    <h3 class="home_subtitle">{{ @$getrecord[0]->work_experience }}</h3>
-                    <p class="home_description">{{ @$getrecord[0]->description }}
-                    </p>
+                    <h1 class="home_title">Hi, {{ @$homeRecords[0]->your_name }} is my name</h1>
+                    <h3 class="home_subtitle">{{ @$homeRecords[0]->work_experience }}</h3>
+                    <p class="home_description">{{ @$homeRecords[0]->description }}</p>
                     <a href="#about" class="button"><i class="uil uil-user button_icon"></i>
                     More About Me
                     </a>
@@ -75,23 +74,23 @@
             <h2 data-heading="My intro"class="section_title">About Me</h2>
 
             <div class="about_container container grid">
-                <img src="{{ url('public/img/'.@$getrecord[0]->about_image)}}" alt="" class="about_img">
+                <img src="{{ url('public/img/'.@$aboutRecords[0]->about_image)}}" alt="" class="about_img">
 
                 <div class="about_data">
-                    <h3 class="about_heading">I'm {{ @$getrecord[0]->your_name }}, currently in {{ @$getrecord[0]->country }}</h3>
-                    <p class="about_description">{{ @$getrecord[0]->description }}</p>
+                    <h3 class="about_heading">I'm {{ @$aboutRecords[0]->your_name }}, currently in {{ @$aboutRecords[0]->country }}</h3>
+                    <p class="about_description">{{ @$aboutRecords[0]->description }}</p>
 
                     <div class="about_info grid">
                         <div class="about_box">
                             <i class="uil uil-award about_icon"></i>
                             <h3 class="about_title">Experience</h3>
-                            <span class="about_subtitle">{{ @$getrecord[0]->years_of_experience }}</span>
+                            <span class="about_subtitle">{{ @$aboutRecords[0]->years_of_experience }}</span>
                         </div>
 
                         <div class="about_box">
                             <i class="uil uil-suitcase-alt about_icon"></i>
                             <h3 class="about_title">Completed</h3>
-                            <span class="about_subtitle">{{ @$getrecord[0]->completed_projects }}</span>
+                            <span class="about_subtitle">{{ @$aboutRecords[0]->completed_projects }}</span>
                         </div>
 
                         <div class="about_box">
