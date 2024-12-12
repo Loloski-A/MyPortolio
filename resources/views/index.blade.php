@@ -140,32 +140,18 @@
                     </h3>
 
                     <div class="timeline">
-                        <div class="timeline_item">
-                            <div class="circle_dot"></div>
-                            <h3 class="timeline_title">Magic Ltd</h3>
-                            <p class="timeline_text">Junior web Dev</p>
-                            <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                            2024 - present
-                            </span>
-                        </div>
 
+                        @foreach ( $experienceRecords as $value)
                         <div class="timeline_item">
                             <div class="circle_dot"></div>
-                            <h3 class="timeline_title">Neema Inc.</h3>
-                            <p class="timeline_text">Ux/Ui Designer</p>
+                            <h3 class="timeline_title">{{$value->company}}</h3>
+                            <p class="timeline_text">{{$value->role}}</p>
                             <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                            2024 - present
+                            {{$value->started_date}} - {{$value->end_date}}
                             </span>
                         </div>
+                        @endforeach
 
-                        <div class="timeline_item">
-                            <div class="circle_dot"></div>
-                            <h3 class="timeline_title">KBY org</h3>
-                            <p class="timeline_text">Lead Web Design and Dev</p>
-                            <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                            2024 - present
-                            </span>
-                        </div>
                     </div>
                 </div>
             </div>

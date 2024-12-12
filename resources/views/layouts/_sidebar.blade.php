@@ -5,7 +5,7 @@
      <aside class="sidebar" id="sidebar">
         <nav class="nav">
             <div class="nav_logo">
-                <a href="{{url('home')}}" class="nav_logo-text">L</a>
+                <a href="#home" class="nav_logo-text">L</a>
             </div>
             <div class="nav_menu">
                 <div class="menu">

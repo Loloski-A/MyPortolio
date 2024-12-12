@@ -11,13 +11,13 @@
             <!--begin::Row-->
             <div class="row">
                 <div class="col-sm-6">
-                    <h3 class="mb-0">Education Journey Add Page</h3>
+                    <h3 class="mb-0">Experience Add Page</h3>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Education
+                            Experience
                         </li>
                     </ol>
                 </div>
@@ -35,31 +35,31 @@
                 <div class="col-md-12">
                     <div class="card card-info">
                         <div class="cart-header mb-3 p-3 bg-info">
-                            <h3 class="card-title ">Add Your Education Journey</h3>
+                            <h3 class="card-title ">Add Your Experiences</h3>
                         </div>
 
-                        <form action="{{ url('admin/education/post')}}" method="post"
+                        <form action="{{ url('admin/experience/post')}}" method="post"
                         class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field()}}
                         <div class="card-body">
 
                             <div class="form-group row mb-3">
                                 <label for="" class="col-sm-2 col-form-lable">
-                                    Institution Name <span style="color: red">*</span>
+                                    Company Name <span style="color: red">*</span>
                                 </label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="institution" required
-                                    class="form-control" placeholder="Enter The Name of the Institution You Went">
+                                    <input type="text" name="company" required
+                                    class="form-control" placeholder="Enter The Company You've Worked for.">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-3">
                                 <label for="" class="col-sm-2 col-form-lable">
-                                    Course <span style="color: red">*</span>
+                                    Role <span style="color: red">*</span>
                                 </label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="course" required
-                                    class="form-control" placeholder="Enter The Course You've Taken">
+                                    <input type="text" name="role" required
+                                    class="form-control" placeholder="Enter The Role in The Company">
                                 </div>
                             </div>
 
@@ -86,7 +86,7 @@
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Add
                                 </button>
-                                <a href="{{ url('admin/education')}}" class="btn btn-default float-right">
+                                <a href="{{ url('admin/experience')}}" class="btn btn-default float-right">
                                     Cancel
                                 </a>
                             </div>

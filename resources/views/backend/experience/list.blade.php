@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <main class="app-main">
     <!--begin::App Content Header-->
     <div class="app-content-header">
@@ -11,13 +10,13 @@
             <!--begin::Row-->
             <div class="row">
                 <div class="col-sm-6">
-                    <h3 class="mb-0">Education Journey Page</h3>
+                    <h3 class="mb-0">Experience Page</h3>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Education
+                            Experience
                         </li>
                     </ol>
                 </div>
@@ -31,7 +30,7 @@
 
             @include('_message')
 
-            <a href="{{ url('admin/education/add')}}" class="btn btn-primary">Add Education Journey</a>
+            <a href="{{ url('admin/experience/add')}}" class="btn btn-primary">Add Your Experience</a>
             <!--begin::Row-->
             <div class="row">
                 <section class="col-lg-12">
@@ -41,25 +40,25 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>INSTITUTION</th>
-                                        <th>COURSE</th>
+                                        <th>COMPANY</th>
+                                        <th>ROLE</th>
                                         <th>STARTED_AT</th>
                                         <th>ENDED_AT</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ( $educationRecords as $value)
+                                    @foreach ( $experienceRecords as $value)
                                     <tr>
                                         <td>{{$value->id}}</td>
-                                        <td>{{$value->institution}}</td>
-                                        <td>{{$value->course}}</td>
+                                        <td>{{$value->company}}</td>
+                                        <td>{{$value->role}}</td>
                                         <td>{{$value->started_date}}</td>
                                         <td>{{$value->end_date}}</td>
                                         <td>
-                                            <a href="{{ url('admin/education/edit/'.$value->id) }}"
+                                            <a href="{{ url('admin/experience/edit/'.$value->id) }}"
                                                 class="btn btn-primary">Edit</a>
                                             <a onclick="return confirm('Are You Sure you want to Delete?')"
-                                            href="{{ url('admin/education/delete/'.$value->id) }}" class="btn btn-danger">Delete</a>
+                                            href="{{ url('admin/experience/delete/'.$value->id) }}" class="btn btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach

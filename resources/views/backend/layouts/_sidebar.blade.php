@@ -81,8 +81,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/education')}}" class="nav-link @if(Request::segment(2) == 'about') active @endif">
-                                <i class="bi bi-mortarboard"></i>
+                            <a href="{{ url('admin/education')}}" class="nav-link @if(Request::segment(2) == 'education') active @endif">
+                                <i class="bi bi-mortarboard-fill"></i>
                                 <p>
                                     Education
                                 </p>
@@ -90,7 +90,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('admin/about')}}" class="nav-link @if(Request::segment(2) == 'about') active @endif">
+                            <a href="{{ url('admin/experience')}}" class="nav-link @if(Request::segment(2) == 'experience') active @endif">
                                 <i class="bi bi-briefcase-fill"></i>
                                 <p>
                                     Experience

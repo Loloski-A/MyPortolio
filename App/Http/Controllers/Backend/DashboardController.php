@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\HomeModel;
 use App\Models\AboutModel;
 use App\Models\EducationModel;
+use App\Models\ExperienceModel;
 
 class DashboardController extends Controller
 {
@@ -124,6 +125,12 @@ class DashboardController extends Controller
     {
         $data['educationRecords'] = EducationModel::get();
         return view('backend.education.list', $data);
+    }
+
+    public function admin_experience(Request $request)
+    {
+        $data['experienceRecords'] = ExperienceModel::get();
+        return view('backend.experience.list', $data);
     }
 
     public function admin_skills(Request $request)
