@@ -117,32 +117,20 @@
                     </h3>
 
                     <div class="timeline">
-                        <div class="timeline_item">
-                            <div class="circle_dot"></div>
-                            <h3 class="timeline_title">TUK University</h3>
-                            <p class="timeline_text">Computer Network</p>
-                            <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                            2021 - present
-                            </span>
-                        </div>
+
+                        @foreach ( $educationRecords as $value)
 
                         <div class="timeline_item">
                             <div class="circle_dot"></div>
-                            <h3 class="timeline_title">TUK University</h3>
-                            <p class="timeline_text">Web Design and Dev</p>
+                            <h3 class="timeline_title">{{$value->institution}}</h3>
+                            <p class="timeline_text">{{$value->course}}</p>
                             <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                            2021 - present
+                            {{$value->started_date}} - {{$value->end_date}}
                             </span>
                         </div>
 
-                        <div class="timeline_item">
-                            <div class="circle_dot"></div>
-                            <h3 class="timeline_title">TUK University</h3>
-                            <p class="timeline_text">Mobile Dev</p>
-                            <span class="timeline_date"><i class="uil uil-calendar-alt"></i>
-                            2021 - present
-                            </span>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
 

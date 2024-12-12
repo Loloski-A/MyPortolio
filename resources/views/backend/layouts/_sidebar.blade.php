@@ -81,6 +81,24 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="{{ url('admin/education')}}" class="nav-link @if(Request::segment(2) == 'about') active @endif">
+                                <i class="bi bi-mortarboard"></i>
+                                <p>
+                                    Education
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ url('admin/about')}}" class="nav-link @if(Request::segment(2) == 'about') active @endif">
+                                <i class="bi bi-briefcase-fill"></i>
+                                <p>
+                                    Experience
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="{{ url('admin/skills')}}" class="nav-link @if(Request::segment(2) == 'skills') active @endif">
                                 <i class="bi bi-tools"></i>
                                 <p>

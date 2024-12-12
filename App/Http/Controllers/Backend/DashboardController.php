@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\HomeModel;
 use App\Models\AboutModel;
+use App\Models\EducationModel;
 
 class DashboardController extends Controller
 {
@@ -117,6 +118,12 @@ class DashboardController extends Controller
         $insertRecord->save();
 
         return redirect()->back()->with('success', 'Home Page Successfully saved');
+    }
+
+    public function admin_education(Request $request)
+    {
+        $data['educationRecords'] = EducationModel::get();
+        return view('backend.education.list', $data);
     }
 
     public function admin_skills(Request $request)
